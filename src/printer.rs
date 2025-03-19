@@ -384,6 +384,9 @@ fn print_summary<W: Write>(
     let style = StyleScheme {
         style_enabled: !disable_style,
     };
+    writeln!(w)?;
+    writeln!(w)?;
+    writeln!(w)?;
     writeln!(w, "{}", style.heading("Summary:"))?;
     let success_rate = 100.0 * res.success_rate();
     writeln!(
